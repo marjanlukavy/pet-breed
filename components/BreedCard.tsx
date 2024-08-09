@@ -1,6 +1,7 @@
 import React from "react";
 import { Breed } from "@/types/types";
 import Link from "next/link";
+import Image from "next/image";
 
 interface BreedCardProps {
   breed: Breed;
@@ -13,10 +14,11 @@ export default function BreedCard({ breed, id }: BreedCardProps) {
       href={`${id}`}
       className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2 cursor-pointer"
     >
-      <div className="relative">
-        <img
+      <div className="relative size-56">
+        <Image
           src={breed.image?.url || "/api/placeholder/400/300"}
           alt={breed?.name}
+          fill
           className="w-full h-56 object-cover"
         />
         {breed?.breed_group ? (

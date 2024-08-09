@@ -1,4 +1,5 @@
 import { Breed } from "@/types/types";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -19,11 +20,12 @@ const PetInfo = ({ breedData, isCat }: PetInfoProps) => {
       <div className="bg-white rounded-3xl shadow-md overflow-hidden max-w-5xl mx-auto my-10">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {breedData.reference_image_id && (
-            <div className="relative">
-              <img
+            <div className="relative size-[300px]">
+              <Image
                 src={`https://cdn2.the${isCat ? "cat" : "dog"}api.com/images/${
                   breedData.reference_image_id
                 }.jpg`}
+                fill
                 alt={breedData.name}
                 className="object-cover w-full h-full"
               />
