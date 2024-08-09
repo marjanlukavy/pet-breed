@@ -1,5 +1,5 @@
 import PetInfo from "@/components/PetInfo";
-import { fetchBreedData } from "@/utils/fetchBreedData";
+import { fetchBreedData } from "@/utils/api";
 import React, { Suspense, useEffect, useState } from "react";
 
 const AnimalPage = async ({

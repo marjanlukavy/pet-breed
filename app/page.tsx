@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import { getBreeds } from "@/utils/getBreeds";
 import BreedCard from "@/components/BreedCard";
 import { Breed } from "@/types/types";
+import { getBreeds } from "@/utils/api";
 
 export default async function Home() {
   let breeds: Breed[] = [];
